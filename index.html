@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>i love you - Sunflower Bouquet</title>
+    <style>
+      .girasol-fondo {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        pointer-events: none;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        animation: caerGirasol 6s linear infinite;
+      }
+      .girasol-fondo .centro {
+        width: 20px;
+        height: 20px;
+        left: 10px;
+        top: 10px;
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, #3f1b16 60%, #110000 100%);
+        z-index: 2;
+      }
+      .girasol-fondo .petalo {
+        position: absolute;
+        width: 12px;
+        height: 20px;
+        background: linear-gradient(to top, #fdc300, #d15001);
+        border-radius: 50% 50% 50% 50%;
+        z-index: 1;
+      }
+      .girasol-fondo .petalo.p1 { left: 14px; top: -6px; transform: rotate(0deg); }
+      .girasol-fondo .petalo.p2 { left: 26px; top: 2px; transform: rotate(45deg); }
+      .girasol-fondo .petalo.p3 { left: 28px; top: 16px; transform: rotate(90deg); }
+      .girasol-fondo .petalo.p4 { left: 18px; top: 28px; transform: rotate(135deg); }
+      .girasol-fondo .petalo.p5 { left: 4px; top: 26px; transform: rotate(180deg); }
+      .girasol-fondo .petalo.p6 { left: -4px; top: 12px; transform: rotate(225deg); }
+      .girasol-fondo .petalo.p7 { left: 2px; top: 0px; transform: rotate(270deg); }
+      .girasol-fondo .petalo.p8 { left: 10px; top: -8px; transform: rotate(315deg); }
+      @keyframes caerGirasol {
+        0% { top: -50px; opacity: 0.7; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { top: 110vh; opacity: 0.2; }
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+  background: linear-gradient(to top, #2e1a47 0%, #a6785a 60%, #e6cba3 100%);
+        overflow: hidden;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      .contenedor {
+        position: absolute;
+        width: 20%;
+        height: 70%;
+        top: 43.5%;
+        left: 40%;
+        scale: 1.2;
+      }
+      .eContenedores .petalo {
+        background: linear-gradient(to top, #d15001, #fdc300, #fdc300);
+        width: 27%;
+        height: 15%;
+        position: absolute;
+        top: 15%;
+        left: 20%;
+        border-top-right-radius: 150%;
+        border-top-left-radius: 40%;
+        border-bottom-left-radius: 150%;
+        border-bottom-right-radius: 15%;
+        z-index: 1;
+      }
+
+      .eContenedores .petalo2 {
+        background: linear-gradient(to top, #d15001, #fdc300, #fdc300);
+        width: 27%;
+        height: 15%;
+        position: absolute;
+        top: 15%;
+        left: 47%;
+        border-top-right-radius: 40%;
+        border-top-left-radius: 150%;
+        border-bottom-left-radius: 15%;
+        border-bottom-right-radius: 150%;
+        z-index: 1;
+      }
+
+      .eContenedores .petalo3 {
+        background: linear-gradient(to top, #d15001, #fdc300, #fdc300);
+        width: 27%;
+        height: 15%;
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        border-top-right-radius: 15%;
+        border-top-left-radius: 150%;
+        border-bottom-left-radius: 40%;
+        border-bottom-right-radius: 150%;
+        z-index: 1;
+      }
+
+      .eContenedores .petalo4 {
+        background: linear-gradient(to top, #d15001, #fdc300, #fdc300);
+        width: 27%;
+        height: 15%;
+        position: absolute;
+        top: 30%;
+        left: 47%;
+        border-top-right-radius: 150%;
+        border-top-left-radius: 15%;
+        border-bottom-left-radius: 150%;
+        border-bottom-right-radius: 40%;
+        z-index: 1;
+      }
+
+      .eContenedores .petalo5 {
+        background: linear-gradient(to top, #d15001, #fdc300, #fdc300);
+        width: 27%;
+        height: 15%;
+        position: absolute;
+        top: 12%;
+        left: 32.7%;
+        border-top-right-radius: 150%;
+        border-top-left-radius: 40%;
+        border-bottom-left-radius: 150%;
+        border-bottom-right-radius: 15%;
+        rotate: 44deg;
+      }
+
+      .eContenedores .petalo6 {
+        background: linear-gradient(to top, #d15001, #fdc300, #fdc300);
+        width: 27%;
+        height: 15%;
+        position: absolute;
+        top: 23%;
+        left: 52%;
+        border-top-right-radius: 40%;
+        border-top-left-radius: 150%;
+        border-bottom-left-radius: 15%;
+        border-bottom-right-radius: 150%;
+        rotate: 44deg;
+      }
+
+      .eContenedores .petalo7 {
+        background: linear-gradient(to top, #d15001, #fdc300, #fdc300);
+        width: 27%;
+        height: 15%;
+        position: absolute;
+        top: 34%;
+        left: 33.4%;
+        border-top-right-radius: 150%;
+        border-top-left-radius: 15%;
+        border-bottom-left-radius: 150%;
+        border-bottom-right-radius: 40%;
+        animation: giro4 2s linear infinite;
+        rotate: 44deg;
+      }
+
+      .eContenedores .petalo8 {
+        background: linear-gradient(to top, #d15001, #fdc300, #fdc300);
+        width: 27%;
+        height: 15%;
+        position: absolute;
+        top: 23%;
+        left: 14%;
+        border-top-right-radius: 15%;
+        border-top-left-radius: 150%;
+        border-bottom-left-radius: 40%;
+        border-bottom-right-radius: 150%;
+        animation: giro3 2s linear infinite;
+        rotate: 44deg;
+      }
+
+      .centro {
+        background: -webkit-radial-gradient(
+          center,
+          circle,
+          #110000,
+          #3f1b16 50%
+        );
+        width: 28%;
+        height: 16%;
+        position: absolute;
+        top: 22%;
+        left: 33%;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      .tallo {
+        background: linear-gradient(to top, #43573e, #43573e, #667266);
+        position: absolute;
+        top: 25%;
+        left: 45%;
+        width: 3%;
+        height: 50%;
+        z-index: -1;
+      }
+      .hoja1 {
+        background: linear-gradient(to right bottom, #667266, #313408, #667266);
+        width: 20%;
+        height: 10%;
+        position: absolute;
+        top: 52%;
+        left: 30%;
+        border-top-right-radius: 150%;
+        border-top-left-radius: 150%;
+        border-bottom-left-radius: 4%;
+        border-bottom-right-radius: 150%;
+      }
+      .hoja2 {
+        background: linear-gradient(to right bottom, #667266, #313408, #667266);
+        width: 20%;
+        height: 10%;
+        position: absolute;
+        top: 64%;
+        left: 40%;
+        border-top-right-radius: 150%;
+        border-top-left-radius: 150%;
+        border-bottom-left-radius: 4%;
+        border-bottom-right-radius: 150%;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Crear girasoles pequeños que caen
+      function crearGirasolesCayendo(cantidad) {
+        for(let i=0;i<cantidad;i++){
+          const girasol=document.createElement('div');
+          girasol.className='girasol-fondo';
+          girasol.style.left=Math.random()*100+'vw';
+          girasol.style.animationDelay=(Math.random()*6)+'s';
+          // Centro
+          const centro=document.createElement('div');
+          centro.className='centro';
+          girasol.appendChild(centro);
+          // Pétalos
+          for(let p=1;p<=8;p++){
+            const petalo=document.createElement('div');
+            petalo.className='petalo p'+p;
+            girasol.appendChild(petalo);
+          }
+          document.body.appendChild(girasol);
+        }
+      }
+      window.addEventListener('DOMContentLoaded',function(){
+        crearGirasolesCayendo(12);
+      });
+    </script>
+  <div class="titulo">
+    <h1 style="color: white; text-align: center; text-shadow: 2px 2px 8px #2e1a47;">
+      TE AMO MUCHO MI AMOR
+    </h1> <BR></BR>
+    <H1 style="color: white; text-align: center; text-shadow: 2px 2px 8px #2e1a47;">DIANA ♥️</H1>
+  </div>
+    <div class="contenedor eContenedores">
+      <div class="petalo petalos"></div>
+      <div class="petalo2 petalos"></div>
+      <div class="petalo3 petalos"></div>
+      <div class="petalo4 petalos"></div>
+      <div class="centro"></div>
+      <div class="petalo5 petalos"></div>
+      <div class="petalo6 petalos"></div>
+      <div class="petalo7 petalos"></div>
+      <div class="petalo8 petalos"></div>
+      <div class="tallo"></div>
+      <div class="hoja1"></div>
+      <div class="hoja2"></div>
+    </div>
+  </body>
+  <script>
+        function iniciar(){
+            var elementoCentro=document.querySelector(".contenedor .centro");
+            elementoCentro.addEventListener("mousemove",girarGirasol);
+        }
+
+        const elementoPetalo1=document.querySelector(".petalo");
+        const elementoPetalo2=document.querySelector(".petalo2");
+        const elementoPetalo3=document.querySelector(".petalo3");
+        const elementoPetalo4=document.querySelector(".petalo4");
+        const elementoPetalo5=document.querySelector(".petalo5");
+        const elementoPetalo6=document.querySelector(".petalo6");
+        const elementoPetalo7=document.querySelector(".petalo7");
+        const elementoPetalo8=document.querySelector(".petalo8");
+
+        var duracionAnimacion=500;
+
+        const animacionPetalol = [
+  {transform: "rotateZ(0deg)",left: "20%",background: "linear-gradient(to top,#D15801,#9673C5,#9673C5 )",offset: 0},
+  {transform: "rotateZ(90deg)",left: "47%",top: "15%",background: "linear-gradient(to top,#D15801,#FDC300,#FDC300)",offset: .25},
+  {transform: "rotateZ(180deg)",left: "47%",top: "30%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: .50},
+  {transform: "rotateZ(270deg)",left: "20%",top: "30%",background: "linear-gradient(to top, #D15801,#9673C5,#9673C5)",offset: .75},
+  {transform: "rotateZ(360deg)",left: "20%",top: "15%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: 1}
+        ];
+        const propiedadAnimacionP1 = {
+        duration: duracionAnimacion,
+        easing: "linear"
+        };
+
+        const animacionPetalo2 = [
+  {transform: "rotateZ(0deg)",left: "47%",top:"15%",background: "linear-gradient(to top,#D15801,#9673C5,#9673C5 )",offset: 0},
+  {transform: "rotateZ(90deg)",left: "47%",top: "30%",background: "linear-gradient(to top,#D15801,#FDC300,#FDC300)",offset: .25},
+  {transform: "rotateZ(180deg)",left: "20%",top: "30%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: .50},
+  {transform: "rotateZ(270deg)",left: "20%",top: "15%",background: "linear-gradient(to top, #D15801,#9673C5,#9673C5)",offset: .75},
+  {transform: "rotateZ(360deg)",left: "47%",top: "15%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: 1}
+        ];
+        const propiedadAnimacionP2 = {
+        duration: duracionAnimacion,
+        easing: "linear"
+        };
+
+        const animacionPetalo3 = [
+  {transform: "rotateZ(0deg)",left: "20%",top:"30%",background: "linear-gradient(to top,#D15801,#9673C5,#9673C5 )",offset: 0},
+  {transform: "rotateZ(90deg)",left: "20%",top: "15%",background: "linear-gradient(to top,#D15801,#FDC300,#FDC300)",offset: .25},
+  {transform: "rotateZ(180deg)",left: "47%",top: "15%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: .50},
+  {transform: "rotateZ(270deg)",left: "47%",top: "30%",background: "linear-gradient(to top, #D15801,#9673C5,#9673C5)",offset: .75},
+  {transform: "rotateZ(360deg)",left: "20%",top: "30%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: 1}
+        ];
+        const propiedadAnimacionP3 = {
+        duration: duracionAnimacion,
+        easing: "linear"
+        };
+
+        const animacionPetalo4 = [
+  {transform: "rotateZ(0deg)",left: "47%",background: "linear-gradient(to top,#D15801,#9673C5,#9673C5 )",offset: 0},
+  {transform: "rotateZ(90deg)",left: "20%",top: "30%",background: "linear-gradient(to top,#D15801,#FDC300,#FDC300)",offset: .25},
+  {transform: "rotateZ(180deg)",left: "20%",top: "15%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: .50},
+  {transform: "rotateZ(270deg)",left: "47%",top: "15%",background: "linear-gradient(to top, #D15801,#9673C5,#9673C5)",offset: .75},
+  {transform: "rotateZ(360deg)",left: "47%",top: "30%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: 1}
+        ];
+        const propiedadAnimacionP4 = {
+        duration: duracionAnimacion,
+        easing: "linear"
+        };
+
+        const animacionPetalo5 = [
+  {transform: "rotateZ(0deg)",left: "32.7%",top:"12%",background: "linear-gradient(to top,#D15801,#9673C5,#9673C5 )",offset: 0},
+  {transform: "rotateZ(90deg)",left: "52%",top: "23%",background: "linear-gradient(to top,#D15801,#FDC300,#FDC300)",offset: .25},
+  {transform: "rotateZ(180deg)",left: "33.4%",top: "34%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: .50},
+  {transform: "rotateZ(270deg)",left: "14%",top: "23%",background: "linear-gradient(to top, #D15801,#9673C5,#9673C5)",offset: .75},
+  {transform: "rotateZ(360deg)",left: "32.7%",top: "12%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: 1}
+        ];
+        const propiedadAnimacionP5 = {
+        duration: duracionAnimacion,
+        easing: "linear"
+        };
+
+        const animacionPetalo6 = [
+  {transform: "rotateZ(0deg)",left: "52%",top:"23%",background: "linear-gradient(to top,#D15801,#9673C5,#9673C5 )",offset: 0},
+  {transform: "rotateZ(90deg)",left: "33.4%",top: "34%",background: "linear-gradient(to top,#D15801,#FDC300,#FDC300)",offset: .25},
+  {transform: "rotateZ(180deg)",left: "14%",top: "23%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: .50},
+  {transform: "rotateZ(270deg)",left: "32.7%",top: "12%",background: "linear-gradient(to top, #D15801,#9673C5,#9673C5)",offset: .75},
+  {transform: "rotateZ(360deg)",left: "52%",top: "23%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: 1}
+        ];
+        const propiedadAnimacionP6 = {
+        duration: duracionAnimacion,
+        easing: "linear"
+        };
+
+        const animacionPetalo7 = [
+  {transform: "rotateZ(0deg)",left: "33.4%",top:"34%",background: "linear-gradient(to top,#D15801,#9673C5,#9673C5 )",offset: 0},
+  {transform: "rotateZ(90deg)",left: "14%",top: "23%",background: "linear-gradient(to top,#D15801,#FDC300,#FDC300)",offset: .25},
+  {transform: "rotateZ(180deg)",left: "32.7%",top: "12%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: .50},
+  {transform: "rotateZ(270deg)",left: "52%",top: "23%",background: "linear-gradient(to top, #D15801,#9673C5,#9673C5)",offset: .75},
+  {transform: "rotateZ(360deg)",left: "33.4%",top: "34%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: 1}
+        ];
+        const propiedadAnimacionP7 = {
+        duration: duracionAnimacion,
+        easing: "linear"
+        };
+
+        const animacionPetalo8 = [
+  {transform: "rotateZ(0deg)",left: "14%",top:"23%",background: "linear-gradient(to top,#D15801,#9673C5,#9673C5 )",offset: 0},
+  {transform: "rotateZ(90deg)",left: "32.7%",top: "12%",background: "linear-gradient(to top,#D15801,#FDC300,#FDC300)",offset: .25},
+  {transform: "rotateZ(180deg)",left: "52%",top: "23%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: .50},
+  {transform: "rotateZ(270deg)",left: "33.4%",top: "34%",background: "linear-gradient(to top, #D15801,#9673C5,#9673C5)",offset: .75},
+  {transform: "rotateZ(360deg)",left: "14%",top: "23%",background: "linear-gradient(to top, #565656, #FEFDFE, #FEFDFE)",offset: 1}
+        ];
+        const propiedadAnimacionP8 = {
+        duration: duracionAnimacion,
+        easing: "linear"
+        };
+
+        function girarGirasol(){
+            elementoPetalo1.animate(animacionPetalol,propiedadAnimacionP1);
+            elementoPetalo2.animate(animacionPetalo2,propiedadAnimacionP2);
+            elementoPetalo3.animate(animacionPetalo3,propiedadAnimacionP3);
+            elementoPetalo4.animate(animacionPetalo4,propiedadAnimacionP4);
+            elementoPetalo5.animate(animacionPetalo5,propiedadAnimacionP5);
+            elementoPetalo6.animate(animacionPetalo6,propiedadAnimacionP6);
+            elementoPetalo7.animate(animacionPetalo7,propiedadAnimacionP7);
+            elementoPetalo8.animate(animacionPetalo8,propiedadAnimacionP8);
+        }
+        
+        window.addEventListener("load",iniciar);
+
+
+  </script>
+</html>
